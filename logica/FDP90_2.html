@@ -1,0 +1,24 @@
+﻿<meta charset="UTF-8">
+<script>
+	/* 
+	*/
+	
+	function readFloat (message) {
+		return parseFloat(prompt(message));
+	}
+
+	var nota1, nota2, media;
+	nota1 = readFloat("Digite a primeira nota: ");
+	nota2 = readFloat("Digite a segunda nota: ");
+	media = (nota1 + nota2)/2
+
+	document.write("A média das notas é " + media + "<br>");
+
+	if(media >= 0 && media < 3){
+		document.write("Aluno reprovado.");
+	}else if(media >= 3 && media < 7){
+		document.write("Exame.");
+	}else if(media >= 7 && media <= 10){
+		document.write("Aluno aprovado.");
+	}
+</script>

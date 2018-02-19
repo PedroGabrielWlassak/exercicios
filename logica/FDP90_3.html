@@ -1,0 +1,26 @@
+﻿<meta charset="UTF-8">
+<script>
+	/* 
+	*/
+	
+	function readFloat (message) {
+		return parseFloat(prompt(message));
+	}
+	
+	var numero1, numero2;
+	numero1 = readFloat ("Digite um número: ");
+	numero2 = readFloat ("Digite outro número: ");
+
+	function mensagem(){
+		if (numero1 > numero2){
+			return "é maior que";
+		}else if (numero1 < numero2){
+			return "é menor que";
+		}else{
+			return "é igual a";
+		}
+	}
+
+		document.write(numero1 +" "+ mensagem() +" "+ numero2);
+	
+</script>
