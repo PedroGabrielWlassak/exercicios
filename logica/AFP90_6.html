@@ -1,0 +1,20 @@
+﻿<meta charset="UTF-8">
+<script>
+	var numero1 = parseFloat(prompt("Informe um número"));
+	var numero2 = parseFloat(prompt("Informe outro número"));
+	
+	var opcao = prompt("Escolha um número de opção a baixo. \n 1 - Resultado do primeiro número elevado ao segundo número \n 2 - Resultado da raíz quadrada de cada número \n 3 - Resultado da raíz cúbica de cada número");
+	if (opcao == 3) {
+		alert("Raíz cúbica de " + numero1 + " = " + Math.cbrt(numero1));	
+		alert("Raíz cúbica de " + numero2 + " = " + Math.cbrt(numero2));
+	}else if (opcao == 2) {
+		alert("Raíz quadrada de " + numero1 + " = " + Math.sqrt(numero1));	
+		alert("Raíz quadrada de " + numero2 + " = " + Math.sqrt(numero2));
+	}else if (opcao == 1) {
+		alert(numero1 + " elevado a " + numero2 + " = " + Math.pow(numero1,numero2));
+	}else{
+		alert("Opção inválida");
+	}
+
+	
+</script>

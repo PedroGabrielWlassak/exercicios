@@ -1,0 +1,16 @@
+﻿<meta charset="UTF-8">
+<script>
+	var investimento = parseFloat(prompt("Informe a quantia que deseja investir"));
+	
+	var opcao = prompt("Escolha um número de opção a baixo. \n 1 - Investimento em poupança \n 2 - Investimento em fundos de renda fixa");
+	
+	if (opcao == 2) {
+		alert("Após um mês de investimento você terá " + (investimento + (investimento * 0.04)));		
+	}else if (opcao == 1) {
+		alert("Após um mês de investimento você terá " + (investimento + (investimento * 0.03)));
+	}else{
+		alert("Opção inválida");
+	}
+
+	
+</script>

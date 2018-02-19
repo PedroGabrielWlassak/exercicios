@@ -1,0 +1,11 @@
+<meta charset="UTF-8">
+<script>
+	var custo = parseFloat(prompt("Informe o custo de fábrica do carro"));
+	if (custo <= 12000){
+		alert("o custo final para o consumidor fica de " + (custo + custo * 0.05) );
+	} else if (custo > 12000 && custo < 25000){
+		alert("o custo final para o consumidor fica de " + (custo + custo * 0.1 + custo * 0.15) );
+	} else {
+		alert("o custo final para o consumidor fica de " + (custo + custo * 0.15 + custo * 0.2) );
+	}
+</script>
