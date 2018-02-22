@@ -1,0 +1,109 @@
+#include <iostream>
+
+using namespace std;
+
+class Prof {
+    private:
+        string nome;
+        int matricula;
+
+    public:
+
+        void setNome(string param){
+            nome = param;
+        }
+
+        string getNome(){
+            return nome;
+        }
+
+        void setMatricula(int param) {
+            matricula = param;
+        }
+
+        int getMatricula(){
+            return matricula;
+        }
+
+};
+
+class Aluno {
+    private:
+        string nome;
+        int matricula;
+
+    public:
+
+        void setNome(string param){
+            nome = param;
+        }
+
+        string getNome(){
+            return nome;
+        }
+
+        void setMatricula(int param) {
+            matricula = param;
+        }
+
+        int getMatricula(){
+            return matricula;
+        }
+
+
+};
+
+class Curso {
+    private:
+        string nomeDoProfessor;
+        int numeroMaximoDeAlunos;
+
+    public:
+        void setNomeDoProfessor (string nome) {
+            if (nome.length() > 25){
+                cout << "O nome fornecido possui " << nome.length() <<"caracteres. O máximo aceito é 25." << endl;
+            }else{
+                nomeDoProfessor = nome;
+            }
+        }
+
+        void setNumeroMaximoDeAlunos(int quantidade) {
+            numeroMaximoDeAlunos = quantidade;
+        }
+
+        string getNomeDoProfessor (){
+            return nomeDoProfessor;
+        }
+
+        int getNumeroMaximoDeAlunos () {
+            return numeroMaximoDeAlunos;
+        }
+
+};
+
+int main()
+{
+    Curso objetoCurso;
+    Prof objetoProf;
+    Aluno objetoAluno;
+
+    string input;
+    int entrada;
+
+    cout << "Entre com o nome do professor: " << endl;
+    getline(cin, input);
+    objetoProf.setNome(input);
+    cout << "Entre com o número de matricula do professor:  " << endl;
+    cin >> entrada;
+    objetoProf.setMatricula(entrada);
+    cout << "O nome do professor é" << objetoProf.getNome() << endl << ". Matrícula: " << objetoProf.getMatricula() << endl;
+
+    cout << "Entre com o nome do aluno: " << endl;
+    getline(cin, input);
+    objetoAluno.setNome(input);
+    cout << "Entre com o número de matricula do aluno:  " << endl;
+    cin >> entrada;
+    objetoAluno.setMatricula(entrada);
+    cout << "O nome do aluno é" << objetoAluno.getNome() << endl << ". Matrícula: " << objetoAluno.getMatricula() << endl;
+    return 0;
+}
