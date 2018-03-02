@@ -1,0 +1,18 @@
+<meta charset="utf-8">
+<script>
+	function scan(msg){
+		return parseInt(prompt(msg));
+	}
+	
+	var n = scan("Quantos números deseja somar?");
+	var soma;
+	
+	soma = 0;
+	for (var i=0; i<n; i++){
+		soma = soma + scan("Informe o "+(i+1)+"º número.");
+		
+	}
+	
+	alert("A soma dos números informados: "+ soma);
+	
+</script>

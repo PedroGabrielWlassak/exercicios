@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+<script>
+	function scan(msg){
+		return parseInt(prompt(msg));
+	}
+	
+	var fatorial, num, input;
+	
+	input = scan("Digite o número para calcular o fatorial.")
+	num = input;
+	fatorial = 1;
+	while(num>0){
+		fatorial = num * fatorial;
+		num = num - 1;
+	}
+	
+	alert("o fatorial de "+input+": "+fatorial);
+	
+</script>
