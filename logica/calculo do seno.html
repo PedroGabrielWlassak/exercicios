@@ -1,0 +1,29 @@
+﻿<meta charset="UTF-8">
+<script>
+	var termos, x, imagem, aux;
+
+	function scan(argument){
+		return parseFloat(prompt(argument));
+	}
+
+	function fatorial(param){
+		if(param >0){
+			return param * fatorial(param-1);
+		}else{
+			return 1;
+		}
+	}
+
+	alert("Este programa calcula sen(x) pela série de taylor.");
+	x = scan("Informe um número para o argumento da função sen(x).");
+	termos = scan("Informe o número de termos para a sequência de taylor.");
+
+	imagem = 0;
+	aux = -1;
+	for(var i = 0; i < termos; i++){
+			imagem = imagem + aux*((x^(2*i-1))/fatorial(2*i-1));
+			aux = aux*(-1);		
+	}
+
+	alert("sen(x) = "+ imagem);
+</script>
