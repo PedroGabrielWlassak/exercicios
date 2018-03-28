@@ -1,0 +1,26 @@
+﻿<meta charset="UTF-8">
+<script>
+function inverte (numiro) {
+	while(numiro/10 >= 1){
+		auxiliaris = auxiliaris + numiro%10;
+		numiro = parseInt(numiro/10);
+	}
+	return auxiliaris;
+}
+var numeroDecimal, restos, quocientes, binario, auxiliaris;
+numeroDecimal= parseInt(prompt("Digue o número na base decimal, aí o pograma converte pa binario."));
+quocientes = numeroDecimal;
+binario="";
+auxiliaris="";
+
+while (quocientes != 0) {
+	restos = quocientes%2;
+	binario = binario + restos;
+	quocientes = parseInt(quocientes/2);
+}
+
+binario = 1 + binario;
+binario = parseInt(binario);
+
+alert(inverte(binario));
+</script>
